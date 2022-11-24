@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300;1,400&display=swap');
+body {
+    background-color: #f1f1f1;
+    font: normal 16px 'Roboto', sans-serif;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    color: blue;
+}
+a:visited {
+    color: dimgrey;
+}
+.menu {
+    background: #b0c4de;
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.menu:hover {
+    opacity: 0.8;
+}
+.td {
+    padding: 15px 25px;
+    color: black;
+    border: 3px solid #9370db;
+    font-family: inherit;
+    border-radius: 30px;
+}
+.card {
+    background-image: url("kot.jpg");
+    border-radius: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border: 2px solid black;
+    padding: 30px 20px 0 20px;
+
+}
+li {
+line-height: 300%;
+}
+.card2 {
+    border: 2px solid black;
+    width: 300px;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 20px;
+}
+#btn {
+    background: #9370db;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 1100px;
+}
+#btn:hover {
+    opacity: 0.8;
+}
+.txt{
+    margin:50px;
+    font-weight: bold;
+
+}
+#vol {
+    color: white;
+    text-decoration: underline #9370db;
+
+}
+.btn2 {
+    background: lightsteelblue;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+.btn2:hover {
+    opacity: 0.8;
+}
+
