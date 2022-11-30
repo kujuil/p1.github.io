@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Game</title>
-</head>
-<body>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Game</title>
+    </head>
+    <body>
+        <h1 style="font-family:Courier, monospace" align="center">
+            Do you want to play a game?
+        </h1>
+        <script>
+            let sWalk = Math.floor(Math.random() * (15)) + 1;
+            let vWalk =  Math.floor(Math.random() * (15)) + 1;
+            document.body.insertAdjacentHTML('beforeend',
+                "<h2>Мы любим наших собак и кошек из приюта. И вот мы выпустили одну из собак." +
+                " Она бежала со скоростью " + String(vWalk) + " км/ч, и потому пробежала "
+                + String(sWalk) + " км. Попробуйте узнать " +
+                "за какое время она пробежала такую дистанцию.</h2>");
+        </script>
+        <p align="center">Сколько минут гуляла наша собака?</p>
+        <p align="center"> <input type="text" id="tWalkUser"/></p>
+        <p align="center"> <input type="button" onclick="comparison()" value="Ответ" id="answer"/> </p>
+        <p align="center"> <input type="button" onclick="location.reload()" value="Обновить"/> </p>
+        <script>
+            let f = false;
+            let g = true;
+            function comparison() {
+                let tWalk = Math.ceil((sWalk * 60) / vWalk);
+                let answer;
+                 if (String(tWalk) === document.getElementById('tWalkUser').value) {
+                     answer = "<p><img src='trueReady.jpg' alt='Loading...' id='win'> </p>";
+                     if (g) {
+                         document.body.insertAdjacentHTML('afterend', answer);
+                         g = false;
+                     }
+                     document.getElementById("false").parentNode.removeChild(document.getElementById("false"));
+                     document.body.insertAdjacentHTML('afterend', answer);
+                     f = false;
+                 }
+                 else {
+                     answer = "<p><img src='falseReady.jpg' alt='Loading...' id='false'> </p>";
+                     if (!f){
+                        document.body.insertAdjacentHTML('afterend', answer);
+                     }
+                     f = true;
+                     g = false;
+                     document.getElementById("win").parentNode.removeChild(document.getElementById("win"));
+                 }
+            }
+        </script>
+    </body>
 </html>
