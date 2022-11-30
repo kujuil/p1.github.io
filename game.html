@@ -18,7 +18,7 @@
                 + String(sWalk) + " км. <br><br>Попробуйте узнать  " +
                 "за какое время она пробежала такую дистанцию.</h3>");
         </script>
-        <div class="quiz">
+        <div class="quiz" id="block">
         <p align="center">Сколько минут гуляла наша собака?<br>(укажите ответ в минутах, округляйте по арифметическим правилам)</p>
         <p align="center"> <input type="text" id="tWalkUser"/></p>
         <p align="center"> <input type="button" onclick="comparison()" value="Ответ" id="answer" class="btn"/> </p>
@@ -33,18 +33,17 @@
                  if (String(tWalk) === document.getElementById('tWalkUser').value) {
                      answer = "<p><img src='trueReady.jpg' alt='Loading...' id='win' class='img' height='300'> </p>";
                      if (g) {
-                         document.body.insertAdjacentHTML('afterend', answer);
+                         document.getElementById("block").insertAdjacentHTML('beforebegin', answer);
                          g = false;
                      }
                      document.getElementById("false").parentNode.removeChild(document.getElementById("false"));
-                     document.body.insertAdjacentHTML('afterend', answer);
+                     document.getElementById("block").insertAdjacentHTML('beforebegin', answer);
                      f = false;
                  }
                  else {
                      answer = "<p><img src='falseReady.jpg' alt='Loading...' id='false' class='img' height='300'> </p>";
-                     if (!f){
-                        document.body.insertAdjacentHTML('afterend', answer);
-                     }
+                     if (!f)
+                         document.getElementById("block").insertAdjacentHTML('beforebegin', answer);
                      f = true;
                      g = false;
                      document.getElementById("win").parentNode.removeChild(document.getElementById("win"));
