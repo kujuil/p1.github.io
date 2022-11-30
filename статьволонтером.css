@@ -101,3 +101,12 @@ h3 {
 .btn2:hover {
     opacity: 0.8;
 }
+.img {
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 14px lightsteelblue;
+    margin: 50px 30px 0px 0px;
+}
+.img:hover {
+    opacity: 0.8;
+}
