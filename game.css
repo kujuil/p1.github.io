@@ -4,12 +4,11 @@ body {
     font: normal 16px 'Roboto', sans-serif;
 }
 .img {
-    border-radius: 20px;
+    border-radius: 50px;
     box-shadow: 4px 4px 14px rgba(0, 0, 0, 25);
-    margin-left: 50px;
-    margin-bottom: 50px;
+    margin-left: 570px;
 }
-.quiz{
+.quiz {
     border: 1px solid black;
     border-radius: 50px;
     width: 40%;
@@ -30,4 +29,26 @@ body {
 .btn:hover {
     opacity: 0.8;
     text-decoration: underline;
+}
+#tWalkUser{
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    color:black;
+    padding: 15px 0 10px;
+    outline: none;
+    font-family: inherit;
+}
+.btn2 {
+    background: lightsteelblue;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.btn2:hover {
+    opacity: 0.8;
 }

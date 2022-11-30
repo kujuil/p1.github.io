@@ -13,10 +13,10 @@
             let sWalk = Math.floor(Math.random() * (15)) + 1;
             let vWalk =  Math.floor(Math.random() * (15)) + 1;
             document.body.insertAdjacentHTML('beforeend',
-                "<h2 align='center'>Мы любим наших собак и кошек из приюта и заботимся об их физическом состоянии. <br> И вот мы выпустили одну из собак побегать на свежем воздухе." +
+                "<h3 align='center'>Мы любим наших собак и кошек из приюта и заботимся об их физическом состоянии. <br> И вот мы выпустили одну из собак побегать на свежем воздухе." +
                 " <br><br>Она бежала со скоростью " + String(vWalk) + " км/ч, <br> таким образом она пробежала "
                 + String(sWalk) + " км. <br><br>Попробуйте узнать  " +
-                "за какое время она пробежала такую дистанцию.</h2>");
+                "за какое время она пробежала такую дистанцию.</h3>");
         </script>
         <div class="quiz">
         <p align="center">Сколько минут гуляла наша собака?<br>(укажите ответ в минутах, округляйте по арифметическим правилам)</p>
@@ -31,7 +31,7 @@
                 let tWalk = Math.ceil((sWalk * 60) / vWalk);
                 let answer;
                  if (String(tWalk) === document.getElementById('tWalkUser').value) {
-                     answer = "<p><img src='trueReady.jpg' alt='Loading...' id='win' class='img'> </p>";
+                     answer = "<p><img src='trueReady.jpg' alt='Loading...' id='win' class='img' height='300'> </p>";
                      if (g) {
                          document.body.insertAdjacentHTML('afterend', answer);
                          g = false;
@@ -41,7 +41,7 @@
                      f = false;
                  }
                  else {
-                     answer = "<p><img src='falseReady.jpg' alt='Loading...' id='false' class='img'> </p>";
+                     answer = "<p><img src='falseReady.jpg' alt='Loading...' id='false' class='img' height='300'> </p>";
                      if (!f){
                         document.body.insertAdjacentHTML('afterend', answer);
                      }
@@ -51,5 +51,7 @@
                  }
             }
         </script>
+        <p align="center"><a href="site.html" class="btn2"> Вернуться </a>
+</p>
     </body>
 </html>
