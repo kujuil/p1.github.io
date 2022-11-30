@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300;1,400&display=swap');
+body {
+    background-color: #f1f1f1;
+    font: normal 16px 'Roboto', sans-serif;
+}
+.img {
+    border-radius: 20px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 25);
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+.quiz{
+    border: 2px solid black;
+    border-radius: 50px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.btn {
+    background: grey;
+    padding: 15px 25px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.btn:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}

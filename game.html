@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Game</title>
+        <link href="game.css" rel="stylesheet"/>
     </head>
     <body>
         <h1 style="font-family:Courier, monospace" align="center">
@@ -12,15 +13,17 @@
             let sWalk = Math.floor(Math.random() * (15)) + 1;
             let vWalk =  Math.floor(Math.random() * (15)) + 1;
             document.body.insertAdjacentHTML('beforeend',
-                "<h2>Мы любим наших собак и кошек из приюта и заботимся об их физическом состоянии. <br>И вот мы выпустили одну из собак побегать на свежем воздухе." +
-                " Она бежала со скоростью " + String(vWalk) + " км/ч, и потому пробежала "
-                + String(sWalk) + " км. <br>Попробуйте узнать  " +
+                "<h2 align='center'>Мы любим наших собак и кошек из приюта и заботимся об их физическом состоянии. <br> И вот мы выпустили одну из собак побегать на свежем воздухе." +
+                " <br><br>Она бежала со скоростью " + String(vWalk) + " км/ч, <br> таким образом она пробежала "
+                + String(sWalk) + " км. <br><br>Попробуйте узнать  " +
                 "за какое время она пробежала такую дистанцию.</h2>");
         </script>
+        <div class="quiz">
         <p align="center">Сколько минут гуляла наша собака?<br>(укажите ответ в минутах, округляйте по арифметическим правилам)</p>
         <p align="center"> <input type="text" id="tWalkUser"/></p>
-        <p align="center"> <input type="button" onclick="comparison()" value="Ответ" id="answer"/> </p>
-        <p align="center"> <input type="button" onclick="location.reload()" value="Обновить"/> </p>
+        <p align="center"> <input type="button" onclick="comparison()" value="Ответ" id="answer" class="btn"/> </p>
+        <p align="center"> <input type="button" onclick="location.reload()" value="Обновить" class="btn"/> </p>
+        </div>
         <script>
             let f = false;
             let g = true;
@@ -28,7 +31,7 @@
                 let tWalk = Math.ceil((sWalk * 60) / vWalk);
                 let answer;
                  if (String(tWalk) === document.getElementById('tWalkUser').value) {
-                     answer = "<p><img src='trueReady.jpg' alt='Loading...' id='win'> </p>";
+                     answer = "<p><img src='trueReady.jpg' alt='Loading...' id='win' class='img'> </p>";
                      if (g) {
                          document.body.insertAdjacentHTML('afterend', answer);
                          g = false;
@@ -38,7 +41,7 @@
                      f = false;
                  }
                  else {
-                     answer = "<p><img src='falseReady.jpg' alt='Loading...' id='false'> </p>";
+                     answer = "<p><img src='falseReady.jpg' alt='Loading...' id='false' class='img'> </p>";
                      if (!f){
                         document.body.insertAdjacentHTML('afterend', answer);
                      }
