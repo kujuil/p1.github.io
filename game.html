@@ -16,11 +16,11 @@
                 "<h3 align='center'>Мы любим наших собак и кошек из приюта и заботимся об их физическом состоянии. <br> И вот мы выпустили одну из собак побегать на свежем воздухе." +
                 " <br><br>Она бежала со скоростью " + String(vWalk) + " км/ч, <br> таким образом она пробежала "
                 + String(sWalk) + " км. <br><br>Попробуйте узнать  " +
-                "за какое время она пробежала такую дистанцию.</h3>");
+                "за какое время она пробежала такую дистанцию.</h3><br>");
         </script>
         <div class="quiz" id="block">
         <p align="center">Сколько минут гуляла наша собака?<br>(укажите ответ в минутах, округляйте по арифметическим правилам)</p>
-        <p align="center"> <input type="text" id="tWalkUser"/></p>
+        <p align="center"> <input type="text" id="tWalkUser" placeholder="Ваш ответ" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"/></p>
         <p align="center"> <input type="button" onclick="comparison()" value="Ответ" id="answer" class="btn"/> </p>
         <p align="center"> <input type="button" onclick="location.reload()" value="Обновить" class="btn"/> </p>
         </div>
